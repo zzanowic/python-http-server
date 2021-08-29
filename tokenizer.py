@@ -1,3 +1,6 @@
+# tokenizer.py
+
+# A class that parses the request and returns a token when asked
 class tokenizer(object):
     def __init__(self, data):
         self.data = data
@@ -36,4 +39,4 @@ class tokenizer(object):
             self.token = token
             return token
         except TypeError:
-            raise TypeError("seperator or delimiter type does not match data type")
+            raise TypeError("Seperator or delimiter type does not match data type")

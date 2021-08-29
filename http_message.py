@@ -1,6 +1,7 @@
-from tokenizer import tokenizer
+# http_message.py
 
-class html_message(object):
+# A class that holds the headers and content for either a response or request
+class http_message(object):
     def __init__(self):
         self._dict = {
             "method" : "",
@@ -59,3 +60,7 @@ class html_message(object):
                 r += f"{self[key]._dict} {self[key]._list}"
 
         return r
+
+    def clear(self):
+        for key in self._dict:
+            self._dict[key] = ""
